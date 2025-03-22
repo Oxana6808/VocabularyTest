@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Изучаю слова для программирования</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container mt-4 d-flex flex-column align-items-center position-relative">
+    <h1 id="title" class="text-center mb-4">Изучаю слова для программирования</h1>
+    <div class="d-flex justify-content-center mb-3">
+        <div class="btn-group" role="group">
+            <button class="btn lang-btn" data-lang="ru">Русский</button>
+            <button class="btn lang-btn" data-lang="en">English</button>
+        </div>
+    </div>
+
+    <!-- Блок с выбором группы -->
+    <div id="theme-selection" class="w-100" style="max-width: 600px;">
+        <h2 id="themes-title" class="text-center mb-4">Список групп</h2>
+        <div id="theme-buttons" class="row g-2"></div>
+    </div>
+</div>
+
+<script type="module">
+    import words from './data.js';
+
+    const groupsDiv = document.getElementById('theme-buttons');
+    const themes = [
+        "Группа 1", "Группа 2", "Группа 3", "Группа 4", "Группа 5",
+        "Группа 6", "Группа 7"
+    ];
+
+    // Кнопки для групп 1-9
+    themes.forEach((theme, index) => {
+        const col = document.createElement('div');
+        col.className = 'col-md-6';
+        const btn = document.createElement('button');
+        btn.className = 'btn theme-btn w-100';
+        btn.setAttribute('data-theme', theme);
+        btn.setAttribute('data-text-ru', theme);
+        btn.setAttribute('data-text-en', `Group ${index + 1}`);
+        btn.textContent = theme;
+        btn.onclick = () => {
+            window.location.href = `test.html?group=${index}`;
+        };
+        col.appendChild(btn);
+        groupsDiv.appendChild(col);
+    });
+
+    // Кнопка "Все слова"
+    const colExam = document.createElement('div');
+    colExam.className = 'col-md-6';
+    const examBtn = document.createElement('button');
+    examBtn.className = 'btn theme-btn w-100';
+    examBtn.setAttribute('data-theme', 'Все слова');
+    examBtn.setAttribute('data-text-ru', 'Все слова');
+    examBtn.setAttribute('data-text-en', 'All Words');
+    examBtn.textContent = 'Все слова';
+    examBtn.onclick = () => {
+        window.location.href = 'test.html?all=true';
+    };
+    colExam.appendChild(examBtn);
+    groupsDiv.appendChild(colExam);
+
+    // Переключение языка
+    let currentLang = localStorage.getItem('language') || "en"; // По умолчанию "English"
+    localStorage.setItem('language', currentLang); // Сохраняем по умолчанию "English"
+
+    // Установка начального состояния кнопок языка
+    document.querySelectorAll(".lang-btn").forEach(btn => {
+        if (btn.dataset.lang === currentLang) {
+            btn.classList.add("active", "btn-success");
+        } else {
+            btn.classList.add("btn-secondary");
+        }
+    });
+
+    document.querySelectorAll(".lang-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+            document.querySelector(".lang-btn.active").classList.remove("active", "btn-success");
+            btn.classList.add("active", "btn-success");
+            document.querySelectorAll(".lang-btn").forEach(otherBtn => {
+                if (otherBtn !== btn) otherBtn.classList.add("btn-secondary");
+            });
+            currentLang = btn.dataset.lang;
+            localStorage.setItem('language', currentLang);
+            updateLanguageButtons();
+            updateThemeButtonsText();
+            updateTitle();
+        });
+    });
+
+    function updateTitle() {
+        const titles = {
+            ru: "Изучаю слова для программирования",
+            en: "Studying Programming Words"
+        };
+        document.getElementById("title").textContent = titles[currentLang];
+        document.getElementById("themes-title").textContent = {
+            ru: "Список групп",
+            en: "List of Groups"
+        }[currentLang];
+    }
+
+    function updateLanguageButtons() {
+        document.querySelectorAll(".lang-btn").forEach(btn => {
+            if (btn.dataset.lang === currentLang) {
+                btn.classList.remove("btn-secondary");
+                btn.classList.add("btn-success");
+            } else {
+                btn.classList.remove("btn-success");
+                btn.classList.add("btn-secondary");
+            }
+        });
+    }
+
+    function updateThemeButtonsText() {
+        document.querySelectorAll(".theme-btn").forEach(btn => {
+            btn.textContent = btn.getAttribute(`data-text-${currentLang}`);
+        });
+    }
+
+    updateLanguageButtons();
+    updateThemeButtonsText();
+    updateTitle();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
