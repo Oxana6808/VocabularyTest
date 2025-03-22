@@ -7,31 +7,32 @@ Programming Words
 Как использовать
 Выбери группу слов на главной странице.
 Проходи тест, выбирая правильный перевод.
-Нажми "Стоп", чтобы увидеть результаты.
+Пройди до конца или нажми "Стоп", чтобы увидеть результаты.
 Используй "Работа над ошибками", чтобы повторить слова, где ошибся.
 Переключай язык (русский/английский) в любой момент.
+
 Технологии
-HTML5, CSS3 (Bootstrap)
+HTML5, 
+CSS3 (Bootstrap)
 JavaScript (ES6+, ES-модули)
 Web Speech API
 localStorage
+
 Установка локально
-Склонируй репозиторий:
-bash
+git clone https://github.com/Oxana6808/VocabularyTest.git
 
-Collapse
+Или протестируй онлайн:
+https://oxana6808.github.io/VocabularyTest/
 
-Wrap
-
-Copy
-git clone https://github.com/твой_пользователь/programming-words.git
-Открой index.html в браузере (или через Live Server).
 
 Скриншоты
+
 Главная
 ![img.png](img.png)
+
 Тест:
 ![img_1.png](img_1.png)
+
 Результат тестирования:
 ![img_2.png](img_2.png)
 
