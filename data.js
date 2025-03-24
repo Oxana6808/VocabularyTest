@@ -792,7 +792,7 @@ const words = [
     {
         "group": 1,
         "english": "carry",
-        "russian": "выполнять, перносить"
+        "russian": "выполнять, переносить"
     },
     {
         "group": 1,
@@ -4296,7 +4296,7 @@ const words = [
     },
     {
         "group": 5,
-        "english": null,
+        "english": "null",
         "russian": "пустое значение в Java"
     },
     {
@@ -6998,6 +6998,1407 @@ const words = [
         "group": 7,
         "english": "zerofilled",
         "russian": "заполненный нулями"
+    },
+
+    {
+        "group": "my-mistakes",
+        "english": "recognized",
+        "russian": "распознанный"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "snapshot",
+        "russian": "снимок (состояния)"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "despite",
+        "russian": "несмотря на"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "allocating",
+        "russian": "выделение"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "modest",
+        "russian": "скромный"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "circular",
+        "russian": "циклический"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "along",
+        "russian": "вместе с"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "multilevel",
+        "russian": "многоуровневый"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "primary",
+        "russian": "основной"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "eligible",
+        "russian": "подходящий"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "due",
+        "russian": "из-за"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "frees",
+        "russian": "освобождает (память)"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "convert",
+        "russian": "преобразовать"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "dealt",
+        "russian": "обработанный"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "notification",
+        "russian": "уведомление"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "responsible",
+        "russian": "ответственный"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "whereas",
+        "russian": "тогда как"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "discards",
+        "russian": "отбрасывает"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "either",
+        "russian": "либо"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "continuously",
+        "russian": "непрерывно"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "reusability",
+        "russian": "повторное использование"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "dequeuing",
+        "russian": "процесс удаления из очереди"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "difficult",
+        "russian": "сложный"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "vary",
+        "russian": "изменяться"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "occurrence",
+        "russian": "вхождение"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "unidirectional",
+        "russian": "однонаправленный"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "overall",
+        "russian": "в целом"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "overloading",
+        "russian": "перегрузка (методов)"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "regulating",
+        "russian": "регулирующий"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "concurrent",
+        "russian": "конкурентный"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "leakage",
+        "russian": "утечка данных"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "fulfill",
+        "russian": "выполнять"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "duration",
+        "russian": "продолжительность"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "resumed",
+        "russian": "возобновленный"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "tabular",
+        "russian": "табличный"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "resume",
+        "russian": "возобновлять"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "easier",
+        "russian": "проще"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "state",
+        "russian": "состояние"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "maintain",
+        "russian": "поддерживать"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "technique",
+        "russian": "техника (метод)"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "traversed",
+        "russian": "пройденный"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "shutdown",
+        "russian": "завершение работы"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "raw",
+        "russian": "сырой (необработанный)"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "retrieving",
+        "russian": "получение (процесс)"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "mostly",
+        "russian": "в основном"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "literal",
+        "russian": "литерал"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "inefficient",
+        "russian": "неэффективный"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "clause",
+        "russian": "предложение"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "attempting",
+        "russian": "попытка"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "suspend",
+        "russian": "приостановить"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "duplicate",
+        "russian": "дубликат"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "presence",
+        "russian": "присутствие"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "apart",
+        "russian": "отдельно"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "consisting",
+        "russian": "состоящий"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "generalize",
+        "russian": "обобщать"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "involve",
+        "russian": "вовлекать"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "conversion",
+        "russian": "преобразование"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "abnormality",
+        "russian": "аномалия"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "survivor",
+        "russian": "область памяти в Java GC"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "modifiable",
+        "russian": "модифицируемый"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "specify",
+        "russian": "указывать"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "deal",
+        "russian": "обрабатывать"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "clash",
+        "russian": "конфликт"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "allocated",
+        "russian": "выделенный"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "volatile",
+        "russian": "изменчивый"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "discarded",
+        "russian": "отброшенный"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "objective",
+        "russian": "цель"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "performance",
+        "russian": "производительность"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "benefit",
+        "russian": "преимущество"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "handled",
+        "russian": "обработанный"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "occur",
+        "russian": "происходить"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "allowed",
+        "russian": "разрешенный"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "overcome",
+        "russian": "преодолеть"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "actual",
+        "russian": "фактический"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "detect",
+        "russian": "обнаруживать"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "drawback",
+        "russian": "недостаток"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "execute",
+        "russian": "выполнять"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "contain",
+        "russian": "содержать"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "latter",
+        "russian": "последний из двух"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "increased",
+        "russian": "увеличенный"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "upon",
+        "russian": "на (поверх)"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "poor",
+        "russian": "слабый (например, производительность)"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "populate",
+        "russian": "заполнять"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "directly",
+        "russian": "напрямую"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "referred",
+        "russian": "упоминаемый"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "particular",
+        "russian": "конкретный"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "processing",
+        "russian": "обработка"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "properly",
+        "russian": "правильно"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "elapse",
+        "russian": "истекать (время)"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "highest",
+        "russian": "самый высокий"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "ascending",
+        "russian": "по возрастанию"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "indicate",
+        "russian": "указывать"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "determined",
+        "russian": "определенный"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "scheduled",
+        "russian": "запланированный"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "commonly",
+        "russian": "обычно"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "step",
+        "russian": "шаг"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "so",
+        "russian": "так"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "brief",
+        "russian": "краткий"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "responsiveness",
+        "russian": "отзывчивость"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "rear",
+        "russian": "задний"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "mapping",
+        "russian": "отображение"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "fail-safe",
+        "russian": "отказоустойчивость"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "derive",
+        "russian": "выводить"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "dispatches",
+        "russian": "отправляет"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "noncontiguous",
+        "russian": "несмежный"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "unlike",
+        "russian": "в отличие от"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "fragile",
+        "russian": "хрупкий"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "holding",
+        "russian": "удерживание"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "optional",
+        "russian": "необязательный"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "failure",
+        "russian": "сбой"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "allocate",
+        "russian": "выделить"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "ownership",
+        "russian": "владение"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "govern",
+        "russian": "управлять"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "relatively",
+        "russian": "относительно"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "reclaim",
+        "russian": "восстанавливать (например, память)"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "derived",
+        "russian": "производный"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "specific",
+        "russian": "конкретный"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "distinct",
+        "russian": "различный"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "advanced",
+        "russian": "продвинутый"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "assuming",
+        "russian": "предполагая"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "meaning",
+        "russian": "значение"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "disrupt",
+        "russian": "нарушать"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "dropped",
+        "russian": "сброшенный"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "exhibit",
+        "russian": "демонстрировать"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "restricted",
+        "russian": "ограниченный"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "eden",
+        "russian": "область памяти в GC Java"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "means",
+        "russian": "средство"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "robust",
+        "russian": "надежный"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "define",
+        "russian": "определять"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "signifies",
+        "russian": "обозначает"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "except",
+        "russian": "кроме"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "establish",
+        "russian": "устанавливать"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "combining",
+        "russian": "объединение"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "Just-In-Time",
+        "russian": "JIT-компилятор"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "ranging",
+        "russian": "варьирующийся"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "abruptly",
+        "russian": "резко"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "traversing",
+        "russian": "обход (процесс)"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "separately",
+        "russian": "отдельно"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "reclaimed",
+        "russian": "восстановленный"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "typically",
+        "russian": "обычно"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "reclaiming",
+        "russian": "восстановление (процесс)"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "treated",
+        "russian": "обработанный"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "explicit",
+        "russian": "явный"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "causing",
+        "russian": "вызывающий"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "performed",
+        "russian": "выполненный"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "gains",
+        "russian": "выгоды"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "propagation",
+        "russian": "распространение"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "implemented",
+        "russian": "реализованный"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "covariant",
+        "russian": "ковариантный"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "enqueue",
+        "russian": "добавлять в очередь"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "exposing",
+        "russian": "раскрытие (например, методов API)"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "predicate",
+        "russian": "предикат"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "attempt",
+        "russian": "попытка"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "locking",
+        "russian": "блокирование"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "runtime",
+        "russian": "время выполнения"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "simplify",
+        "russian": "упрощать"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "transient",
+        "russian": "временный"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "throwing",
+        "russian": "выбрасывание (исключения)"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "interrupted",
+        "russian": "прерванный"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "contiguous",
+        "russian": "смежный"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "ensuring",
+        "russian": "обеспечение"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "compare",
+        "russian": "сравнивать"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "established",
+        "russian": "установленный"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "complement",
+        "russian": "дополнение"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "underlying",
+        "russian": "базовый (фоновый)"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "allocation",
+        "russian": "распределение"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "enabled",
+        "russian": "включенный"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "accelerate",
+        "russian": "ускорять"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "drive",
+        "russian": "диск (или привод)"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "restricting",
+        "russian": "ограничение (процесс)"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "appropriately",
+        "russian": "надлежащим образом"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "generation",
+        "russian": "поколение"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "notified",
+        "russian": "уведомленный"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "dispatch",
+        "russian": "отправка"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "occupied",
+        "russian": "занятый"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "provided",
+        "russian": "предоставленный"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "notion",
+        "russian": "понятие"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "indirectly",
+        "russian": "косвенно"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "leak",
+        "russian": "утечка"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "utilize",
+        "russian": "использовать"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "designed",
+        "russian": "спроектированный"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "discrepancy",
+        "russian": "расхождение"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "slightly",
+        "russian": "немного"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "promoted",
+        "russian": "повышенный (в смысле уровня или статуса)"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "rather",
+        "russian": "скорее"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "wrong",
+        "russian": "неправильный"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "instantiated",
+        "russian": "созданный экземпляр"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "accordingly",
+        "russian": "соответственно"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "instantiate",
+        "russian": "создавать экземпляр"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "out",
+        "russian": "выход, выведенный"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "variety",
+        "russian": "разнообразие"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "pillars",
+        "russian": "основы"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "recover",
+        "russian": "восстанавливать"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "advisable",
+        "russian": "рекомендуемый"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "loose",
+        "russian": "свободный (развязанный)"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "overhead",
+        "russian": "накладные расходы"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "retrieval",
+        "russian": "извлечение"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "jagged",
+        "russian": "зубчатый (массив)"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "obtain",
+        "russian": "получить"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "further",
+        "russian": "далее"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "lookups",
+        "russian": "поиск"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "efficiently",
+        "russian": "продуктивно"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "enable",
+        "russian": "включать"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "acquire",
+        "russian": "получать"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "broad",
+        "russian": "широкий"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "chunks",
+        "russian": "блоки (данных)"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "implications",
+        "russian": "последствия"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "interrupt",
+        "russian": "прерывать"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "declare",
+        "russian": "объявлять"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "feasible",
+        "russian": "осуществимый"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "invoke",
+        "russian": "вызывать"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "noofbytes",
+        "russian": "количество байтов"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "unsigned",
+        "russian": "без знака"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "routine",
+        "russian": "процедура"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "actually",
+        "russian": "на самом деле"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "deferred",
+        "russian": "отложенный"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "handle",
+        "russian": "обработка"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "caught",
+        "russian": "перехваченный (исключение)"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "individual",
+        "russian": "индивидуальный"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "thus",
+        "russian": "таким образом"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "suspended",
+        "russian": "приостановленный"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "advantage",
+        "russian": "преимущество"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "entire",
+        "russian": "весь"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "support",
+        "russian": "поддержка"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "crucial",
+        "russian": "критически важный"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "signed",
+        "russian": "со знаком (например, signed int)"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "instant",
+        "russian": "мгновенный"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "caused",
+        "russian": "вызванный"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "appropriate",
+        "russian": "подходящий"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "according",
+        "russian": "согласно"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "increase",
+        "russian": "увеличивать"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "defining",
+        "russian": "определение (процесс)"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "handling",
+        "russian": "обработка (например, исключений)"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "delay",
+        "russian": "задержка"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "naming",
+        "russian": "именование"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "appearance",
+        "russian": "внешний вид"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "obtained",
+        "russian": "полученный"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "causes",
+        "russian": "вызывает"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "decreased",
+        "russian": "уменьшенный"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "entry",
+        "russian": "запись"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "internal",
+        "russian": "внутренний"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "enabling",
+        "russian": "включение"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "builtin",
+        "russian": "встроенный"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "maintenance",
+        "russian": "обслуживание"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "interaction",
+        "russian": "взаимодействие"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "although",
+        "russian": "хотя"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "resizable",
+        "russian": "изменяемый по размеру"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "hence",
+        "russian": "следовательно"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "stands",
+        "russian": "обозначает"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "locate",
+        "russian": "находить"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "interprocess",
+        "russian": "межпроцессный"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "scalability",
+        "russian": "масштабируемость"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "capacity",
+        "russian": "емкость"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "restrict",
+        "russian": "ограничивать"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "maintaining",
+        "russian": "поддержание"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "unnecessarily",
+        "russian": "ненужно"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "recovering",
+        "russian": "восстановление (процесс)"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "regex",
+        "russian": "регулярное выражение"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "maintains",
+        "russian": "поддерживает"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "mentioning",
+        "russian": "упоминание"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "specified",
+        "russian": "указанный"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "impact",
+        "russian": "влияние"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "maintained",
+        "russian": "поддерживаемый (в прошлом)"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "tight",
+        "russian": "плотный"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "imperative",
+        "russian": "императивный"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "shallow",
+        "russian": "неглубокий"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "within",
+        "russian": "внутри"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "spawned",
+        "russian": "порожденный"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "inappropriate",
+        "russian": "неподходящий"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "retrieve",
+        "russian": "получать"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "preferred",
+        "russian": "предпочтительный"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "immutable",
+        "russian": "неизменяемый"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "improve",
+        "russian": "улучшать"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "meaningful",
+        "russian": "значимый"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "frequently",
+        "russian": "часто"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "implies",
+        "russian": "подразумевает"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "performing",
+        "russian": "выполнение"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "throughout",
+        "russian": "повсюду"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "enhance",
+        "russian": "улучшать"
+    },
+    {
+        "group": "my-mistakes",
+        "english": "consistent",
+        "russian": "согласованный"
     }
 ]
 

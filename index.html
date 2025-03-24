@@ -33,7 +33,7 @@
         "Группа 6", "Группа 7"
     ];
 
-    // Кнопки для групп 1-9
+    // Кнопки для групп 1-7
     themes.forEach((theme, index) => {
         const col = document.createElement('div');
         col.className = 'col-md-6';
@@ -49,6 +49,21 @@
         col.appendChild(btn);
         groupsDiv.appendChild(col);
     });
+
+    // Кнопка "Мои ошибки"
+    const colMyMistakes = document.createElement('div');
+    colMyMistakes.className = 'col-md-6';
+    const myMistakesBtn = document.createElement('button');
+    myMistakesBtn.className = 'btn theme-btn w-100';
+    myMistakesBtn.setAttribute('data-theme', 'Мои ошибки');
+    myMistakesBtn.setAttribute('data-text-ru', 'Мои ошибки');
+    myMistakesBtn.setAttribute('data-text-en', 'My Mistakes');
+    myMistakesBtn.textContent = 'Мои ошибки';
+    myMistakesBtn.onclick = () => {
+        window.location.href = 'test.html?group=my-mistakes';
+    };
+    colMyMistakes.appendChild(myMistakesBtn);
+    groupsDiv.appendChild(colMyMistakes);
 
     // Кнопка "Все слова"
     const colExam = document.createElement('div');
@@ -66,8 +81,8 @@
     groupsDiv.appendChild(colExam);
 
     // Переключение языка
-    let currentLang = localStorage.getItem('language') || "en"; // По умолчанию "English"
-    localStorage.setItem('language', currentLang); // Сохраняем по умолчанию "English"
+    let currentLang = localStorage.getItem('language') || "en";
+    localStorage.setItem('language', currentLang);
 
     // Установка начального состояния кнопок языка
     document.querySelectorAll(".lang-btn").forEach(btn => {

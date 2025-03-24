@@ -7,12 +7,12 @@ let shuffledWords = [];
 let selectedOption = null;
 let isIncorrectSelected = false;
 let mistakes = new Set();
-let correctAnswers = 0; // Счётчик правильных ответов
-let totalWords = 0; // Общее количество слов в тесте
-let isResultsShown = false; // Флаг для отслеживания, была ли уже показана страница результатов
+let correctAnswers = 0;
+let totalWords = 0;
+let isResultsShown = false;
 
 const urlParams = new URLSearchParams(window.location.search);
-const groupIndex = parseInt(urlParams.get('group'));
+const groupIndex = urlParams.get('group'); // Теперь строка, а не parseInt
 const isAll = urlParams.get('all') === 'true';
 const isMistakes = urlParams.get('mistakes') === 'true';
 
@@ -28,9 +28,20 @@ function initializeWords() {
             return false;
         }
     } else if (isAll) {
-        shuffledWords = [...words].sort(() => Math.random() - 0.5);
+        // Исключаем слова из группы "my-mistakes"
+        shuffledWords = [...words]
+            .filter(word => word.group !== "my-mistakes")
+            .sort(() => Math.random() - 0.5);
+    } else if (groupIndex === "my-mistakes") {
+        // Загружаем только слова из группы "my-mistakes"
+        shuffledWords = [...words]
+            .filter(word => word.group === "my-mistakes")
+            .sort(() => Math.random() - 0.5);
     } else {
-        shuffledWords = [...words].filter(word => word.group === (groupIndex + 1)).sort(() => Math.random() - 0.5);
+        // Для групп 1-7
+        shuffledWords = [...words]
+            .filter(word => word.group === (parseInt(groupIndex) + 1))
+            .sort(() => Math.random() - 0.5);
     }
 
     totalWords = shuffledWords.length;
@@ -84,11 +95,9 @@ document.querySelectorAll(".language-btn").forEach(btn => {
         updateButtonText();
         updateTitle();
         updateTableHeaders();
-        // Если находимся на странице теста (resultsDiv скрыт), обновляем вопрос
         if (resultsDiv.classList.contains("d-none")) {
             loadQuestion();
         } else {
-            // Если находимся на странице результатов, обновляем текст статистики
             updateResultsText();
         }
     });
@@ -161,14 +170,15 @@ function updateButtonText() {
         en: "Work on Mistakes"
     }[currentLang];
 
-    // Обновление текста группы при смене языка, но только если не на странице результатов
     if (groupDisplay && resultsDiv.classList.contains("d-none")) {
         if (isMistakes) {
             groupDisplay.textContent = currentLang === "ru" ? "Работа над ошибками" : "Work on Mistakes";
         } else if (isAll) {
             groupDisplay.textContent = currentLang === "ru" ? "Все слова" : "All Words";
+        } else if (groupIndex === "my-mistakes") {
+            groupDisplay.textContent = currentLang === "ru" ? "Мои ошибки" : "My Mistakes";
         } else {
-            groupDisplay.textContent = currentLang === "ru" ? `Группа ${groupIndex + 1}` : `Group ${groupIndex + 1}`;
+            groupDisplay.textContent = currentLang === "ru" ? `Группа ${parseInt(groupIndex) + 1}` : `Group ${parseInt(groupIndex) + 1}`;
         }
     }
 }
@@ -187,14 +197,15 @@ function loadQuestion() {
         console.log('Текущее слово:', word);
         questionWord.textContent = currentLang === "ru" ? word.russian : word.english;
 
-        // Отображение текущей группы
         if (groupDisplay) {
             if (isMistakes) {
                 groupDisplay.textContent = currentLang === "ru" ? "Работа над ошибками" : "Work on Mistakes";
             } else if (isAll) {
                 groupDisplay.textContent = currentLang === "ru" ? "Все слова" : "All Words";
+            } else if (groupIndex === "my-mistakes") {
+                groupDisplay.textContent = currentLang === "ru" ? "Мои ошибки" : "My Mistakes";
             } else {
-                groupDisplay.textContent = currentLang === "ru" ? `Группа ${groupIndex + 1}` : `Group ${groupIndex + 1}`;
+                groupDisplay.textContent = currentLang === "ru" ? `Группа ${parseInt(groupIndex) + 1}` : `Group ${parseInt(groupIndex) + 1}`;
             }
         }
 
@@ -256,7 +267,6 @@ function selectOption(selected, correctWord, btn) {
     const isCorrect = selected === correctAnswer;
     const wordString = JSON.stringify(correctWord);
 
-    // Проверяем, есть ли слово уже в ошибках
     const isAlreadyMistake = mistakes.has(wordString);
 
     if (!isCorrect) {
@@ -270,7 +280,7 @@ function selectOption(selected, correctWord, btn) {
 
         btn.classList.remove("btn-outline-primary");
         btn.classList.add("btn-danger");
-        mistakes.add(wordString); // Ошибка добавляется только один раз, так как это Set
+        mistakes.add(wordString);
         console.log('Добавлена ошибка:', correctWord);
         isIncorrectSelected = true;
         dontKnowBtn.setAttribute('data-text', currentLang === "ru" ? "Не знаю" : "Don't Know");
@@ -279,9 +289,7 @@ function selectOption(selected, correctWord, btn) {
             en: "Don't Know"
         }[currentLang];
     } else {
-        // Если слово уже в ошибках, не увеличиваем correctAnswers
         if (!isAlreadyMistake) {
-            // Увеличиваем счётчик правильных ответов только если это первый правильный выбор
             correctAnswers++;
             console.log('Правильный ответ с первого раза:', correctWord);
         }
@@ -350,7 +358,7 @@ stopBtn.addEventListener("click", () => {
 function showResults() {
     questionWord.textContent = '';
     progress.textContent = '';
-    if (groupDisplay) groupDisplay.textContent = ''; // Очищаем текст группы на странице результатов
+    if (groupDisplay) groupDisplay.textContent = '';
     optionsDiv.innerHTML = '';
     stopBtn.style.display = "none";
     speakBtn.style.display = "none";
@@ -361,7 +369,6 @@ function showResults() {
     const mistakeWords = Array.from(mistakes).map(m => JSON.parse(m));
     console.log('Ошибки перед сохранением:', mistakeWords);
 
-    // Подсчитываем правильные ответы как totalWords - количество ошибок
     correctAnswers = totalWords - mistakeWords.length;
 
     if (mistakeWords.length === 0) {
@@ -374,10 +381,8 @@ function showResults() {
         });
     }
 
-    // Обновляем текст статистики
     updateResultsText();
 
-    // Сохраняем ошибки в localStorage только при первом показе результатов
     if (!isResultsShown) {
         try {
             localStorage.setItem('currentSessionMistakes', JSON.stringify(mistakeWords));
@@ -387,7 +392,7 @@ function showResults() {
         }
 
         saveMistakes();
-        isResultsShown = true; // Устанавливаем флаг, чтобы не перезаписывать localStorage при повторных вызовах
+        isResultsShown = true;
     }
 
     updateLanguageButtons();
@@ -430,7 +435,7 @@ backBtn.addEventListener("click", () => {
     } catch (error) {
         console.error('Ошибка при очистке localStorage:', error);
     }
-    isResultsShown = false; // Сбрасываем флаг при возвращении на главную
+    isResultsShown = false;
     window.location.href = 'index.html';
 });
 
