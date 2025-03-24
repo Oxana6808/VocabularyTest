@@ -11,8 +11,15 @@ let correctAnswers = 0;
 let totalWords = 0;
 let isResultsShown = false;
 
+// Переменные для таймера
+let timer = null;
+let timeLeft = 5; // 5 секунд на слово
+const timerCheckbox = document.getElementById('timerCheckbox');
+const timerDisplay = document.getElementById('timerDisplay');
+const timerLabel = document.getElementById('timerLabel');
+
 const urlParams = new URLSearchParams(window.location.search);
-const groupIndex = urlParams.get('group'); // Теперь строка, а не parseInt
+const groupIndex = urlParams.get('group');
 const isAll = urlParams.get('all') === 'true';
 const isMistakes = urlParams.get('mistakes') === 'true';
 
@@ -28,17 +35,14 @@ function initializeWords() {
             return false;
         }
     } else if (isAll) {
-        // Исключаем слова из группы "my-mistakes"
         shuffledWords = [...words]
             .filter(word => word.group !== "my-mistakes")
             .sort(() => Math.random() - 0.5);
     } else if (groupIndex === "my-mistakes") {
-        // Загружаем только слова из группы "my-mistakes"
         shuffledWords = [...words]
             .filter(word => word.group === "my-mistakes")
             .sort(() => Math.random() - 0.5);
     } else {
-        // Для групп 1-7
         shuffledWords = [...words]
             .filter(word => word.group === (parseInt(groupIndex) + 1))
             .sort(() => Math.random() - 0.5);
@@ -73,6 +77,73 @@ if (!workOnMistakesBtn) {
 } else {
     console.log('Кнопка "Work on Mistakes" найдена, привязываем обработчик');
 }
+
+// Функция для форматирования времени в формате 00:05
+function formatTime(seconds) {
+    const mins = Math.floor(seconds / 60);
+    const secs = seconds % 60;
+    return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+}
+
+// Функция для воспроизведения звука ошибки
+function playErrorSound() {
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    const oscillator = audioCtx.createOscillator();
+    oscillator.type = 'square';
+    oscillator.frequency.setValueAtTime(500, audioCtx.currentTime);
+    oscillator.connect(audioCtx.destination);
+    oscillator.start();
+    oscillator.stop(audioCtx.currentTime + 0.1);
+}
+
+// Функция для запуска таймера
+function startTimer() {
+    if (!timerCheckbox.checked) {
+        stopTimer();
+        timerDisplay.textContent = formatTime(5);
+        timerDisplay.classList.remove('active');
+        timerDisplay.classList.add('inactive');
+        return;
+    }
+
+    timeLeft = 5; // Сбрасываем время
+    timerDisplay.textContent = formatTime(timeLeft);
+    timerDisplay.classList.remove('inactive');
+    timerDisplay.classList.add('active');
+
+    stopTimer(); // Останавливаем предыдущий таймер, если он есть
+
+    timer = setInterval(() => {
+        timeLeft--;
+        timerDisplay.textContent = formatTime(timeLeft);
+
+        if (timeLeft <= 0) {
+            stopTimer();
+            // Автоматически нажимаем "Не знаю" и воспроизводим звук
+            if (dontKnowBtn.getAttribute('data-text') === "Не знаю" || dontKnowBtn.getAttribute('data-text') === "Don't Know") {
+                playErrorSound();
+                dontKnowBtn.click();
+            }
+        }
+    }, 1000);
+}
+
+// Функция для остановки таймера
+function stopTimer() {
+    if (timer) {
+        clearInterval(timer);
+        timer = null;
+    }
+}
+
+// Обработчик для чекбокса
+timerCheckbox.addEventListener('change', () => {
+    if (timerCheckbox.checked) {
+        startTimer();
+    } else {
+        stopTimer();
+    }
+});
 
 document.querySelectorAll(".language-btn").forEach(btn => {
     if (btn.dataset.lang === currentLang) {
@@ -169,6 +240,10 @@ function updateButtonText() {
         ru: "Работа над ошибками",
         en: "Work on Mistakes"
     }[currentLang];
+    timerLabel.textContent = {
+        ru: "Таймер",
+        en: "Timer"
+    }[currentLang];
 
     if (groupDisplay && resultsDiv.classList.contains("d-none")) {
         if (isMistakes) {
@@ -233,6 +308,9 @@ function loadQuestion() {
         updateLanguageButtons();
         updateButtonText();
         updateTitle();
+
+        // Запускаем таймер, если чекбокс включён
+        startTimer();
     } catch (error) {
         console.error('Ошибка в loadQuestion():', error);
     }
@@ -270,14 +348,7 @@ function selectOption(selected, correctWord, btn) {
     const isAlreadyMistake = mistakes.has(wordString);
 
     if (!isCorrect) {
-        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-        const oscillator = audioCtx.createOscillator();
-        oscillator.type = 'square';
-        oscillator.frequency.setValueAtTime(500, audioCtx.currentTime);
-        oscillator.connect(audioCtx.destination);
-        oscillator.start();
-        oscillator.stop(audioCtx.currentTime + 0.1);
-
+        playErrorSound();
         btn.classList.remove("btn-outline-primary");
         btn.classList.add("btn-danger");
         mistakes.add(wordString);
@@ -304,6 +375,7 @@ function selectOption(selected, correctWord, btn) {
         isIncorrectSelected = false;
     }
     dontKnowBtn.style.display = "block";
+    stopTimer(); // Останавливаем таймер при выборе ответа
 }
 
 function resetOptionColors() {
@@ -352,10 +424,12 @@ dontKnowBtn.addEventListener("click", () => {
 });
 
 stopBtn.addEventListener("click", () => {
+    stopTimer();
     showResults();
 });
 
 function showResults() {
+    stopTimer();
     questionWord.textContent = '';
     progress.textContent = '';
     if (groupDisplay) groupDisplay.textContent = '';

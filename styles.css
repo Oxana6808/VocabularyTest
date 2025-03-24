@@ -116,6 +116,40 @@ h1 {
     color: #8b5a2b; /* Карамельный тёмный */
 }
 
+/* Стили для чекбокса и таймера */
+.form-check {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.form-check-label {
+    color: #5c4033; /* Шоколадный тёмно-коричневый */
+    font-size: 0.9rem;
+}
+
+.form-check-input {
+    cursor: pointer;
+}
+
+.timer-text {
+    font-family: monospace;
+    font-size: 1rem;
+    padding: 2px 8px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.timer-text.inactive {
+    color: #a9a9a9; /* Серый цвет, когда таймер неактивен */
+    background-color: rgba(169, 169, 169, 0.1);
+}
+
+.timer-text.active {
+    color: #8b5a2b; /* Карамельный тёмный, когда таймер активен */
+    background-color: rgba(139, 90, 43, 0.1);
+}
+
 .option-btn {
     width: 100%;
     max-width: 300px;
